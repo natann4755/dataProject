@@ -1,0 +1,32 @@
+<div>
+        <h1>last 10 photos</h1>
+       
+        <ul class="ul1">
+            <li class="li1" *ngFor = "let potos of tenPhotos">
+               <p class="titel">{{potos.id}}-{{potos.title}}</p> <br>
+                <img src="{{potos.url}}"><br>
+            </li>
+        </ul>
+   
+        </div>
+
+        <div class="ul2">
+        <h1>last 10 posts</h1>
+        <ul >
+            <li class="li2" *ngFor = "let pos of tenposts">
+                id :{{pos.id}} <br>
+                userid :{{pos.userId}} <br>
+                titel :{{pos.title}} <br>
+                body :{{pos.body}} <br>
+                <br>
+                <ul>
+                <li *ngFor = "let com of pos.myComment">
+                    comment:{{com.body}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+       
+    </div>
